@@ -8,12 +8,16 @@
   <body>
     <h1>LINUX mini project</h1>
     <section class="get">
-        <h3>Scripts</h3>
+        <h3>User</h3>
         <div>
             {{# each items }}
                 <article class="item">
-                    <div><b>Name:</b> {{ this.Name }}</div>
-                    <div>The script: {{ this.Script }}</div>
+                    <div>Name:    {{ this.name }}</div>
+                    <div>Age:     {{ this.age }}</div>
+                    <div>Email:   {{ this.email}}</div>
+                    <div>Phone:   {{ this.phone }}</div>
+                    <div>Sex:     {{ this.sex}}</div>
+                    <div>City:    {{ this.city }}</div>              
                 </article>
             {{/each}}
         </div>

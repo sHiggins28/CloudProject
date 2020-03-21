@@ -46,7 +46,15 @@ router.post('/userinfo', function (req, res, next) {
 
   const userInfoModel = new userInfo(data);
   userInfoModel.save();
-  res.render('index');
+
+  // userInfo.find({city:{$eq:"Tuam"}})
+  //     .then(function(doc) {
+  //       console.log("Got as far as here, array length is: " + doc.length);
+  //       res.render('result1', {title: "My Page", items: doc});
+  //     });
+
+
+  res.render('interests');
 });
 
 router.get('/userinfo',  function(req, res, next) {
@@ -60,6 +68,5 @@ router.get('/userinfo',  function(req, res, next) {
 router.get('/userform',  function(req, res, next) {
       res.render('userform');
 });
-
 
 module.exports = router;
