@@ -3,23 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <title>Client Data</title>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .midsection {
+            display: flex;
+            flex-direction: row;
+        }
+        .form-section {
+            display: flex;
+            flex-direction: column;
+        }
+        .checkbox-grid li {
+            display: block;
+            float: left;
+            width:25%;
+        }
+    </style>
 </head>
-<body>
-    <h1>Please fill data in the form below:</h1>
-    <form method="POST" action="/userinfo">
-        <label>Name :<input type="text" name="name" required></label>
-        <br>
-        <label>Email:<input type="text" name="email" required></label>
-        <br>
-        <label>Age  :<input type="text" name="age" required></label>
-        <br>
-        <label>Sex  :<input type="text" name="sex" required></label>
-        <br>
-        <label>Phone:<input type="text" name="phone" required></label>
-        <br>
-        <label>City :<input type="text" name="city" required></label>
-        <br>
-        <input type="submit" value="Submit">
-    </form>
+<body bgcolor=#050121>
+    <div class="flex-container">
+        <div style="min-height:100px"></div>
+        <div class="midsection">
+            <div style="width:33%"></div>
+            <div class="form-section" style="width:33%">
+            
+                <div style="min-height:250px; text-align:center">
+                <form method="POST" action="/userinfo">
+                    <label><input type="text" name="name" placeholder="Nickname" required></label>
+                    <br>
+                    <label><input type="text" name="email" placeholder="Email" required></label>
+                    <br>
+                    <label><input type="text" name="age" placeholder="Age" required></label>
+                    <br>
+                    <label><input type="text" name="sex" placeholder="Sex" required></label>
+                    <br>
+                    <label><input type="text" name="phone" placeholder="Phone" required></label>
+                    <br>
+                    <label><input type="text" name="city" placeholder="City" required></label>
+                    <br>
+                </div>
+
+                <div style="min-height:150px">
+                    <ul class="checkbox-grid">
+                        <li><input type="checkbox" name="cars" value="on" ><label for="cars"><font color="white">Cars</label></li>
+                        <li><input type="checkbox" name="nature" value="on" ><label for="nature">Nature</label</li>
+                        <li><input type="checkbox" name="movies" value="on" ><label for="movies">Movies</label</li>
+                        <li><input type="checkbox" name="music" value="on" ><label for="music">Music</label></li>
+                        <li><input type="checkbox" name="books" value="on" ><label for="books">Books</label></li>
+                        <li><input type="checkbox" name="sport" value="on" ><label for="sport">Sport</label></li>
+                        <li><input type="checkbox" name="travelling" value="on" ><label for="travelling">Travel</label></li>
+                        <li><input type="checkbox" name="gaming" value="on" ><label for="gaming">Gaming</label></li>
+                        <li><input type="checkbox" name="flowers" value="on" ><label for="flowers">Flowers</label></li>
+                        <li><input type="checkbox" name="dance" value="on" ><label for="dance">Dance</label></li>
+                        <li><input type="checkbox" name="technology" value="on" ><label for="technology">Tech</label></li>
+                        <li><input type="checkbox" name="outdoor_activities" value="on" ><label for="outdoor_activities">Activities</font></label></li>
+                    </ul>
+                </div>
+
+                <div style="min-height:33%; text-align:center">
+                    <input type="submit" value="Submit">
+                </div>
+
+                </form>
+                </div>
+            <div style="width:33%"></div>
+        </div>
+        <div></div>
+    </div>
 </body>
 </html>
