@@ -28,7 +28,7 @@ var userInfoSchema = new Schema({
 var userInfo = mongoose.model('UserInfos', userInfoSchema);
 
 router.get('/', function(req, res, next) {
-        res.render('intro', {title: "Welcome"});
+        res.render('intro');
 });
 
 router.post('/userinfo', function (req, res, next) {

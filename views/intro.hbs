@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
       <meta charset="UTF-8">
-      <title>{{ title }}</title>
+      <title>Welcome</title>
       <link rel="stylesheet" href="/stylesheets/style.css">
       <style>
         .flex_container {
@@ -15,15 +15,18 @@
           background-color: black;
           border: 2px solid orange;
           color: white;
-          width: 250px;
-          height: 50px;
           border-radius: 8px;
+	  padding: 20px 34px;
+	  text-align: center;
+	  display: inline-block;
+	  margin: 4px 2px;
+	  cursor: pointer;
+  	  text-decoration: none;
         }
       </style>
   </head>
   <body bgcolor=#050121>
     <h1 style="text-align:center; color:orange">Friend Finder</h1>
-    <section class="get">
         <div class="flex_container">
             <div style="min-height: 100px">
                 <h2>Welcome to Friend Finder!!!</h2> 
@@ -39,9 +42,8 @@
                 </p>
             </div>
             <div style="min-height: 200px">
-                <button class="button" type="button" text="Start search" >Start your search!</button>
+		<a href="userform" class="button">Start your search!</a>
             </div>
         </div>
-    </section>
 </body>
 </html>
