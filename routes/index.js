@@ -4,22 +4,6 @@ var mongoose = require('mongoose');
 mongoose.connect('localhost:27017/scriptDb');
 var Schema = mongoose.Schema;
 
-var userDataSchema = new Schema({
-  Name: String,
-  Script: String
-});
-
-var UserData = mongoose.model('script', userDataSchema);
-
-router.get('/', function(req, res, next) {
-  UserData.find()
-      .then(function(doc) {
-        console.log("Got as far as here, array length is: " + doc.length);
-        res.render('index', {title: "My Page", items: doc});
-      });
-});
-
-
 var userInfoSchema = new Schema({
   name: String,
   age: String,
@@ -42,6 +26,10 @@ var userInfoSchema = new Schema({
 });
 
 var userInfo = mongoose.model('UserInfos', userInfoSchema);
+
+router.get('/', function(req, res, next) {
+        res.render('intro', {title: "Welcome"});
+});
 
 router.post('/userinfo', function (req, res, next) {
 
@@ -87,18 +75,7 @@ router.post('/userinfo', function (req, res, next) {
                 ]})
       .then(function(doc) {
         console.log("Got as far as here, array length is: " + doc.length);
-        res.render('result1', {title: "My Page", items: doc});
-      });
-
-
-  //res.render('interests');
-});
-
-router.get('/userinfo',  function(req, res, next) {
-  userInfo.find()
-      .then(function(doc) {
-        console.log("Got as far as here, array length is: " + doc.length);
-        res.render('index', {title: "My Page", items: doc});
+        res.render('result1', {title: "Interest Form", items: doc});
       });
 });
 
