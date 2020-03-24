@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>{{ title }}</title>
+      <link rel="stylesheet" href="/stylesheets/style.css">
+      <style>
+        .flex_container {
+            display:flex;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+        }
+        .button {
+          background-color: black;
+          border: 2px solid orange;
+          color: white;
+          width: 250px;
+          height: 50px;
+          border-radius: 8px;
+        }
+      </style>
+  </head>
+  <body bgcolor=#050121>
+    <h1 style="text-align:center; color:orange">Friend Finder</h1>
+    <section class="get">
+        <div class="flex_container">
+            <div style="min-height: 100px">
+                <h2>Welcome to Friend Finder!!!</h2> 
+            </div>
+            <div style="min-height:200px">
+                <h3>Have you ever wanted to find out if there are people of the same interests
+                in your vicinity that you could connect with? Well, this site does exactly that 
+                and will match you with people of the same interests. Simply fill in the details, 
+                select at least 5 different areas that spark joy in you and let the server do the 
+                work. 
+                <p> 
+                Click the button below to proceed.
+                </p>
+            </div>
+            <div style="min-height: 200px">
+                <button class="button" type="button" text="Start search" >Start your search!</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
