@@ -71,7 +71,20 @@ router.post('/userinfo', function (req, res, next) {
   const userInfoModel = new userInfo(data);
   userInfoModel.save();
 
-  userInfo.find({$and: [{city:{$eq:req.body.city}}, {sport:{$eq:req.body.sport}}, {movies:{$eq:req.body.movies}}] })
+  userInfo.find({$and: [{city:{$eq:req.body.city}},
+                {sport:{$eq:req.body.sport}},
+                {movies:{$eq:req.body.movies}},
+                {cars:{$eq:req.body.cars}},
+                {nature:{$eq:req.body.nature}},
+                {music:{$eq:req.body.music}},
+                {books:{$eq:req.body.books}},
+                {travelling:{$eq:req.body.travelling}},
+                {gaming:{$eq:req.body.gaming}},
+                {flowers:{$eq:req.body.flowers}},
+                {dance:{$eq:req.body.dance}},
+                {technology:{$eq:req.body.technology}},
+                {outdoor_activities:{$eq:req.body.outdoor_activities}}
+                ]})
       .then(function(doc) {
         console.log("Got as far as here, array length is: " + doc.length);
         res.render('result1', {title: "My Page", items: doc});
