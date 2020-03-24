@@ -2,22 +2,30 @@
 <html lang="en">
   <head>
       <meta charset="UTF-8">
-      <title>{{ title }}</title>
+      <title>Results</title>
       <link rel="stylesheet" href="/stylesheets/style.css">
+
+      <style>
+        .result_pane {
+            margin: 10px 0;
+            padding: 5px;
+            background: #818f89;
+            border: 1px solid white;
+        }
+      </style>
   </head>
-  <body>
-    <h1>LINUX mini project</h1>
+  <body bgcolor=#050121>
+    <h1><font color="grey">Results</font></h1>
     <section class="get">
-        <h3>User</h3>
         <div>
             {{# each items }}
-                <article class="item">
-                    <div>Name:    {{ this.name }}</div>
-                    <div>Age:     {{ this.age }}</div>
-                    <div>Email:   {{ this.email}}</div>
-                    <div>Phone:   {{ this.phone }}</div>
-                    <div>Sex:     {{ this.sex}}</div>
-                    <div>City:    {{ this.city }}</div>              
+                <article class="result_pane">
+                    <div><b>Name:</b>    {{ this.name }}</div>
+                    <div><b>Age:</b>     {{ this.age }}</div>
+                    <div><b>Email:</b>   {{ this.email}}</div>
+                    <div><b>Phone:</b>   {{ this.phone }}</div>
+                    <div><b>Sex:</b>     {{ this.sex}}</div>
+                    <div><b>City:</b>    {{ this.city }}</div>              
                 </article>
             {{/each}}
         </div>
