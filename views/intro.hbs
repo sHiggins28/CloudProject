@@ -25,7 +25,7 @@
         }
       </style>
   </head>
-  <body bgcolor=#050121>
+  <body bgcolor=#050121 onload=display_time();>
     <h1 style="text-align:center; color:orange">Friend Finder</h1>
         <div class="flex_container">
             <div style="min-height: 100px">
@@ -44,6 +44,23 @@
             <div style="min-height: 200px">
 		<a href="userform" class="button">Start your search!</a>
             </div>
+	    <div id="timediv">
+
+	    </div>
         </div>
 </body>
+
+<script type="text/javascript">
+function refresh_time() {
+	var refresh = 1000;
+	mytime=setTimeout('display_time()', refresh);
+}
+
+function display_time() {
+	var a = new Date();
+	document.getElementById('timediv').innerHTML = a;
+	refresh_time();
+}
+
+</script>
 </html>
